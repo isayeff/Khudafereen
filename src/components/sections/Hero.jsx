@@ -7,7 +7,7 @@ function Hero() {
             {/* Hero Image - positioned to show the graduate on the right */}
             <div className="absolute -z-10 inset-0 w-full h-full">
                 <img
-                    src="/heroImage.png"
+                    src="/hero/heroImage.png"
                     alt="Graduate student"
                     className="w-full h-full object-cover object-[70%_center]"
                 />

@@ -18,7 +18,7 @@ function Navbar() {
           <div className="flex justify-between items-center text-white">
             <div>
               <img
-                src={"/logo.png"}
+                src={"/logos/logo.png"}
                 alt="Khudaferin Logo - Official brand logo of Khudaferin"
                 title="Khudaferin Logo"
                 className="w-24 sm:w-28 md:w-32 lg:w-38 h-auto"

@@ -485,97 +485,97 @@ export const winnersData = [
     name: "Elvin İsayev",
     shortText: "The University of Sheffield / UK, Sheffield",
     longText: "Elvin, bizim vasitəmizlə Sheffield Universitetində Dövlət Proqramı təqaüdü ilə 'Advanced Computer Science' üzrə təhsil alır.",
-    imgPath: '/src/assets/winnerImgs/elvinisayev.jpeg'
+    imgPath: '/winnerImgs/elvinisayev.jpeg'
   },
   {
     id: 1,
     name: "Mehriban Həsənli",
     shortText: "Goethe University / Almaniya, Frankfurt",
     longText: "Mehriban, bizim vasitəmizlə Goethe Universitetində DAAD təqaüdü ilə 'Management International' üzrə təhsil alır.",
-    imgPath: require('./src/assets/winnerImgs/mehribanhasanli.jpeg')
+    imgPath: '/winnerImgs/mehribanhasanli.jpeg'
   },
   {
     id: 2,
     name: "Türkan Oruclu",
     shortText: "JIANGSU UNIVERSITY / Çin, Nankin",
     longText: "Türkan, bizim vasitəmizlə Jiangsu Universitetində Çin HTP proqramı ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/turkanorclu.jpeg'
+    imgPath: '/winnerImgs/turkanorclu.jpeg'
   },
   {
     id: 3,
     name: "Faiq Əliyev",
     shortText: "Vienna University / Avstriya, Vyana",
     longText: "Faiq, bizim vasitəmizlə Vyana Universitetində 'Advanced Computer Science' üzrə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/faiqaliyev.jpeg'
+    imgPath: '/winnerImgs/faiqaliyev.jpeg'
   },
   {
     id: 4,
     name: "Vəfa Hacıyeva",
     shortText: "Lund University / İsveç, Lund",
     longText: "Vəfa, bizim vasitəmizlə Lund Universitetində SI təqaüdü ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/vefahaciyeva.jpeg'
+    imgPath: '/winnerImgs/vefahaciyeva.jpeg'
   },
   {
     id: 5,
     name: "İbrahim Salayev",
     shortText: "The University of Edinburgh / UK, Edinburq",
     longText: "İbrahim, bizim vasitəmizlə The University of Edinburgh-da MSc Public Policy üzrə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/ibrahimsalayev.jpeg'
+    imgPath: '/winnerImgs/ibrahimsalayev.jpeg'
   },
   {
     id: 6,
     name: "Rəvan Hacıyev",
     shortText: "Leeds University / UK, Lids",
     longText: "Rəvan, bizim vasitəmizlə Leeds Universitetində Dövlət Proqramı təqaüdü ilə 'Advanced Computer Science (AI)' üzrə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/revanhaciyev.jpeg'
+    imgPath: '/winnerImgs/revanhaciyev.jpeg'
   },
   {
     id: 7,
     name: "Aydan Şirinova",
     shortText: "Zhejiang University / Çin, Hangcou",
     longText: "Aydan, bizim vasitəmizlə Zhejiang Universitetində Enterprise Management üzrə HTP proqramı ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/aydansirinova.jpeg'
+    imgPath: '/winnerImgs/aydansirinova.jpeg'
   },
   {
     id: 8,
     name: "Aytac İbadova",
     shortText: "ELTE University / Macarıstan, Budapeşt",
     longText: "Aytac, bizim vasitəmizlə ELTE Universitetində Educational Science üzrə HTP proqramı ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/aytacibadova.jpeg'
+    imgPath: '/winnerImgs/aytacibadova.jpeg'
   },
   {
     id: 9,
     name: "Nərminə Sultanova",
     shortText: "National University of Singapore / Sinqapur, Sinqapur",
     longText: "Nərminə, bizim vasitəmizlə Sinqapurun Top8 Milli Universitetində təhsil alır.",
-    imgPath: './src/assets/winnerImgs/nerminesultanova.jpeg'
+    imgPath: '/winnerImgs/nerminesultanova.jpeg'
   },
   {
     id: 10,
     name: "Nazpəri Qasımzadə",
     shortText: "Jagiellonian University / Polşa, Krakov",
     longText: "Nazpəri, bizim vasitəmizlə Jagiellonian Universitetində Business and Finance Management üzrə Stefan Banach təqaüdü ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/nazperiqasimzade.jpeg'
+    imgPath: '/winnerImgs/nazperiqasimzade.jpeg'
   },
   {
     id: 11,
     name: "Züleyxa Qənbərova",
     shortText: "New York University / ABŞ, Nyu-York",
     longText: "Züleyxa, bizim vasitəmizlə Nyu-York Universitetində Biotechnology üzrə təhsil alır. Universitet TOP 35-də yer alır.",
-    imgPath: './src/assets/winnerImgs/zuleyxaqemberova.jpeg'
+    imgPath: '/winnerImgs/zuleyxaqemberova.jpeg'
   },
   {
     id: 12,
     name: "Ramal Məmmədov",
     shortText: "ELTE / Macarıstan, Budapeşt",
     longText: "Ramal, bizim vasitəmizlə Eötvös Loránd Universitetində HTP proqramı ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/ramalmammadov.jpeg'
+    imgPath: '/winnerImgs/ramalmammadov.jpeg'
   },
   {
     id: 13,
     name: "Abdulqadir Əhmədov",
     shortText: "Budapest University of Technology and Economics / Macarıstan, Budapeşt",
     longText: "Abdulqadir, bizim vasitəmizlə Budapeşt Universitetində Autonomous Vehicle Engineering üzrə HTP təqaüdü ilə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/abdulqadirahmadov.jpeg'
+    imgPath: '/winnerImgs/abdulqadirahmadov.jpeg'
   }
 ];
