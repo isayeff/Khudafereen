@@ -492,7 +492,7 @@ export const winnersData = [
     name: "Mehriban Həsənli",
     shortText: "Goethe University / Almaniya, Frankfurt",
     longText: "Mehriban, bizim vasitəmizlə Goethe Universitetində DAAD təqaüdü ilə 'Management International' üzrə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/mehribanhasanli.jpeg'
+    imgPath: require('./src/assets/winnerImgs/mehribanhasanli.jpeg')
   },
   {
     id: 2,
