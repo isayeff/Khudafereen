@@ -485,7 +485,7 @@ export const winnersData = [
     name: "Elvin İsayev",
     shortText: "The University of Sheffield / UK, Sheffield",
     longText: "Elvin, bizim vasitəmizlə Sheffield Universitetində Dövlət Proqramı təqaüdü ilə 'Advanced Computer Science' üzrə təhsil alır.",
-    imgPath: './src/assets/winnerImgs/elvinisayev.jpeg'
+    imgPath: '/src/assets/winnerImgs/elvinisayev.jpeg'
   },
   {
     id: 1,
