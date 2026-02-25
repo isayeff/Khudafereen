@@ -1,0 +1,91 @@
+import React from 'react'
+import { Container } from '../common/Container'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Navigation } from 'swiper/modules';
+import { winnersData } from '../../data/siteData';
+
+function Winners() {
+    return (
+        <>
+            <Container className='py-25 flex flex-col justify-center items-center text-center gap-5'>
+                <h3 className='xuduText text-[1.3rem] font-bold'>Haqqımızda və Uğurlarımız</h3>
+                <div className='text-[#898A8C]'>
+                    Bizim missiyamız gənclərimizin xaricdə keyfiyyətli təhsil almasına dəstək olmaq
+                    və onların gələcək karyeralarına möhkəm zəmin yaratmaqdır. Məqsədimiz tələbələrə
+                    düzgün seçimlərdə yol göstərmək və uğurlu gələcək qurmaqda onların etibarlı tərəfdaşı olmaqdır.
+                </div>
+            </Container>
+
+            <Container>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={true}
+                    breakpoints={{
+                        100: {
+                            slidesPerView: 1.2,
+                            spaceBetween: 20,
+                        },
+                        490: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                    }}
+                    modules={[Autoplay, Navigation]}
+                    className="mySwiper"
+                >
+
+                    {
+                        winnersData.map((item) => {
+                            return (
+                                <SwiperSlide className='relative z-1'>
+                                    <div className='w-full h-full relative'>
+                                        <div className='h-100'>
+                                            <img src={item.imgPath} alt="" />
+                                        </div>
+                                        <div id='cardShortText' className='text-white text-start p-2 absolute bottom-0 translate-y-0 z-100'>
+                                            <div className='font-bold'>
+                                                {item.name}
+                                            </div>
+                                            <div className='text-[12px] pl-2'>
+                                                • {item.shortText}
+                                            </div>
+                                        </div>
+                                        <div id='cardTextOverlay'>
+                                            {item.longText}
+                                        </div>
+                                        <div className='cardOverlay'></div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+            </Container>
+            <div className='my-30'></div>
+        </>
+    )
+}
+
+export default Winners

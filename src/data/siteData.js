@@ -9,12 +9,12 @@ export const CONTACT_INFO = {
   phoneAlt: '+994 50 747 47 44',
   address: 'Nizami Street, Baku',
   calendlyLink: 'https://calendly.com/khudafereen/konsultasiya',
-  
+
   workingHours: {
     weekday: 'Monday to Friday: 09:00 - 18:00',
     saturday: 'Saturday: 10:00 - 12:00'
   },
-  
+
   social: {
     instagram: 'https://instagram.com/thekhudafereen',
     whatsapp: 'https://wa.me/994703873837',
@@ -180,7 +180,7 @@ export const UNIVERSITY_SCHOLARSHIPS = {
   description: 'Bir çox ölkədə universitetlər öz daxili təqaüd proqramları təklif edir',
   countries: [
     'Niderland',
-    'Kanada', 
+    'Kanada',
     'ABŞ',
     'Birləşmiş Krallıq',
     'Polşa'
@@ -399,7 +399,7 @@ export const COUNTRIES = [
     flag: '🇩🇪',
     universities: '15+',
     scholarships: ['DAAD', 'Erasmus+'],
-    image: '/images/countries/germany.jpg'
+    image: '/images/countries/germany.jpeg'
   },
   {
     id: 2,
@@ -407,7 +407,7 @@ export const COUNTRIES = [
     flag: '🇵🇱',
     universities: '12+',
     scholarships: ['NAWA', 'Universitet təqaüdləri'],
-    image: '/images/countries/poland.jpg'
+    image: '/images/countries/poland.jpeg'
   },
   {
     id: 3,
@@ -415,7 +415,7 @@ export const COUNTRIES = [
     flag: '🇹🇷',
     universities: '8+',
     scholarships: ['Türkiyə Bursu', 'YÖK'],
-    image: '/images/countries/turkey.jpg'
+    image: '/images/countries/turkey.jpeg'
   },
   {
     id: 4,
@@ -423,7 +423,7 @@ export const COUNTRIES = [
     flag: '🇭🇺',
     universities: '10+',
     scholarships: ['Stipendium Hungaricum'],
-    image: '/images/countries/hungary.jpg'
+    image: '/images/countries/hungary.jpeg'
   },
   {
     id: 5,
@@ -431,7 +431,7 @@ export const COUNTRIES = [
     flag: '🇨🇿',
     universities: '7+',
     scholarships: ['Dövlət təqaüdü'],
-    image: '/images/countries/czech.jpg'
+    image: '/images/countries/czech.jpeg'
   },
   {
     id: 6,
@@ -439,7 +439,7 @@ export const COUNTRIES = [
     flag: '🇮🇹',
     universities: '9+',
     scholarships: ['MAECI', 'Invest Your Talent'],
-    image: '/images/countries/italy.jpg'
+    image: '/images/countries/italy.jpeg'
   }
 ];
 
@@ -477,29 +477,105 @@ export const FAQ = [
 // ============================================
 // TESTIMONIALS
 // ============================================
-export const TESTIMONIALS = [
+
+
+export const winnersData = [
+  {
+    id: 0,
+    name: "Elvin İsayev",
+    shortText: "The University of Sheffield / UK, Sheffield",
+    longText: "Elvin, bizim vasitəmizlə Sheffield Universitetində Dövlət Proqramı təqaüdü ilə 'Advanced Computer Science' üzrə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/elvinisayev.jpeg'
+  },
   {
     id: 1,
-    name: 'Nigar Əliyeva',
-    university: 'Technical University of Munich',
-    country: 'Almaniya',
-    image: '/images/testimonials/student-1.jpg',
-    text: 'The Khudafereen sayəsində DAAD təqaüdü qazandım və indi Münhendə təhsil alıram. Hər addımda yanımda oldular!'
+    name: "Mehriban Həsənli",
+    shortText: "Goethe University / Almaniya, Frankfurt",
+    longText: "Mehriban, bizim vasitəmizlə Goethe Universitetində DAAD təqaüdü ilə 'Management International' üzrə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/mehribanhasanli.jpeg'
   },
   {
     id: 2,
-    name: 'Rəşad Məmmədov',
-    university: 'University of Warsaw',
-    country: 'Polşa',
-    image: '/images/testimonials/student-2.jpg',
-    text: 'Professional yanaşma və dəstək. Sənəd hazırlığından visaya qədər hər şeyi əhatə etdilər.'
+    name: "Türkan Oruclu",
+    shortText: "JIANGSU UNIVERSITY / Çin, Nankin",
+    longText: "Türkan, bizim vasitəmizlə Jiangsu Universitetində Çin HTP proqramı ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/turkanorclu.jpeg'
   },
   {
     id: 3,
-    name: 'Aysel Həsənova',
-    university: 'Erasmus University Rotterdam',
-    country: 'Niderland',
-    image: '/images/testimonials/student-3.jpg',
-    text: 'Erasmus Mundus təqaüdü almağıma kömək etdilər. Ən yaxşı qərar idi!'
+    name: "Faiq Əliyev",
+    shortText: "Vienna University / Avstriya, Vyana",
+    longText: "Faiq, bizim vasitəmizlə Vyana Universitetində 'Advanced Computer Science' üzrə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/faiqaliyev.jpeg'
+  },
+  {
+    id: 4,
+    name: "Vəfa Hacıyeva",
+    shortText: "Lund University / İsveç, Lund",
+    longText: "Vəfa, bizim vasitəmizlə Lund Universitetində SI təqaüdü ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/vefahaciyeva.jpeg'
+  },
+  {
+    id: 5,
+    name: "İbrahim Salayev",
+    shortText: "The University of Edinburgh / UK, Edinburq",
+    longText: "İbrahim, bizim vasitəmizlə The University of Edinburgh-da MSc Public Policy üzrə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/ibrahimsalayev.jpeg'
+  },
+  {
+    id: 6,
+    name: "Rəvan Hacıyev",
+    shortText: "Leeds University / UK, Lids",
+    longText: "Rəvan, bizim vasitəmizlə Leeds Universitetində Dövlət Proqramı təqaüdü ilə 'Advanced Computer Science (AI)' üzrə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/revanhaciyev.jpeg'
+  },
+  {
+    id: 7,
+    name: "Aydan Şirinova",
+    shortText: "Zhejiang University / Çin, Hangcou",
+    longText: "Aydan, bizim vasitəmizlə Zhejiang Universitetində Enterprise Management üzrə HTP proqramı ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/aydansirinova.jpeg'
+  },
+  {
+    id: 8,
+    name: "Aytac İbadova",
+    shortText: "ELTE University / Macarıstan, Budapeşt",
+    longText: "Aytac, bizim vasitəmizlə ELTE Universitetində Educational Science üzrə HTP proqramı ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/aytacibadova.jpeg'
+  },
+  {
+    id: 9,
+    name: "Nərminə Sultanova",
+    shortText: "National University of Singapore / Sinqapur, Sinqapur",
+    longText: "Nərminə, bizim vasitəmizlə Sinqapurun Top8 Milli Universitetində təhsil alır.",
+    imgPath: './src/assets/winnerImgs/nerminesultanova.jpeg'
+  },
+  {
+    id: 10,
+    name: "Nazpəri Qasımzadə",
+    shortText: "Jagiellonian University / Polşa, Krakov",
+    longText: "Nazpəri, bizim vasitəmizlə Jagiellonian Universitetində Business and Finance Management üzrə Stefan Banach təqaüdü ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/nazperiqasimzade.jpeg'
+  },
+  {
+    id: 11,
+    name: "Züleyxa Qənbərova",
+    shortText: "New York University / ABŞ, Nyu-York",
+    longText: "Züleyxa, bizim vasitəmizlə Nyu-York Universitetində Biotechnology üzrə təhsil alır. Universitet TOP 35-də yer alır.",
+    imgPath: './src/assets/winnerImgs/zuleyxaqemberova.jpeg'
+  },
+  {
+    id: 12,
+    name: "Ramal Məmmədov",
+    shortText: "ELTE / Macarıstan, Budapeşt",
+    longText: "Ramal, bizim vasitəmizlə Eötvös Loránd Universitetində HTP proqramı ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/ramalmammadov.jpeg'
+  },
+  {
+    id: 13,
+    name: "Abdulqadir Əhmədov",
+    shortText: "Budapest University of Technology and Economics / Macarıstan, Budapeşt",
+    longText: "Abdulqadir, bizim vasitəmizlə Budapeşt Universitetində Autonomous Vehicle Engineering üzrə HTP təqaüdü ilə təhsil alır.",
+    imgPath: './src/assets/winnerImgs/abdulqadirahmadov.jpeg'
   }
 ];

@@ -1,14 +1,19 @@
-import { IoMenu } from "react-icons/io5";
 import { Container } from "../common/Container";
 import { useState } from "react";
 import MobileMenu from "../common/MobileMenu";
+import { Spin as Hamburger } from 'hamburger-react'
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  console.log(open);
+  
+  const toggleMenu = () => {
+    setOpen(prev => !prev);
+  };
 
   return (
     <>
-      <nav className="xuduBg py-3">
+      <nav className="xuduBg py-2 relative">
         <Container>
           <div className="flex justify-between items-center text-white">
             <div>
@@ -20,7 +25,7 @@ function Navbar() {
                 loading="lazy"
               />
             </div>
-            <IoMenu onClick={() => setOpen(true)} size={30} />
+            <Hamburger size={25} direction="right" toggled={open} toggle={toggleMenu} />
           </div>
         </Container>
       </nav>

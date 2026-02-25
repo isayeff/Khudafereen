@@ -1,18 +1,17 @@
-import { Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { IoCloseOutline, IoMenu } from 'react-icons/io5'
-import { Container } from './Container'
-import { GoHome } from "react-icons/go";
-import { MdOutlineMedicalServices } from "react-icons/md";
-import { GoTrophy } from "react-icons/go";
-import { BsGlobe } from "react-icons/bs";
-import { AiOutlineFileSearch } from "react-icons/ai";
-import { GoQuestion } from "react-icons/go";
-import { LuMessageSquareMore } from "react-icons/lu";
+import { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { IoCloseOutline, IoMenu } from 'react-icons/io5';
+import { Container } from './Container';
+import { GoHome } from 'react-icons/go';
+import { MdOutlineMedicalServices } from 'react-icons/md';
+import { GoTrophy } from 'react-icons/go';
+import { BsGlobe } from 'react-icons/bs';
+import { AiOutlineFileSearch } from 'react-icons/ai';
+import { GoQuestion } from 'react-icons/go';
+import { LuMessageSquareMore } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
 
 export default function MobileMenu({ open, setOpen }) {
-
   const menuItems = [
     { label: 'Haqqımızda', href: '#haqqimizda', icon: <GoHome size={30} /> },
     { label: 'Xidmətlərimiz', href: '#xidmetler', icon: <MdOutlineMedicalServices size={30} /> },
@@ -25,7 +24,7 @@ export default function MobileMenu({ open, setOpen }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Dialog as="div" className="z-10 bg-white absolute top-[78.74px]" onClose={() => setOpen(false)} static>
         {/* Backdrop */}
         <Transition.Child
           as={Fragment}
@@ -36,13 +35,13 @@ export default function MobileMenu({ open, setOpen }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-opacity-75 transition-opacity" />
+          <div className="transition-opacity" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
+        <div className="fixed overflow-hidden">
+          <div className="absolute overflow-hidden">
             {/* Soldan sağa açılması üçün left-0 və pr-10 */}
-            <div className="pointer-events-none fixed inset-y-0 left-0 flex max-w-full">
+            <div className="pointer-events-none fixed left-0 flex max-w-full">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -53,46 +52,23 @@ export default function MobileMenu({ open, setOpen }) {
                 leaveTo="-translate-x-full"    // ← Sola gedir
               >
                 {/* w-screen = full width */}
-                <Dialog.Panel className="pointer-events-auto w-screen">
-                  <div className="xuduBg py-3">
-                    <Container>
-                      <div className="flex justify-between items-center text-white">
-                        <div>
-                          <img
-                            src={"/logo.png"}
-                            alt="Khudaferin Logo - Official brand logo of Khudaferin"
-                            title="Khudaferin Logo"
-                            className="w-24 sm:w-28 md:w-32 lg:w-38 h-auto"
-                            loading="lazy"
-                          />
-                        </div>
-                        <IoCloseOutline
-                          size={30}
-                          onClick={() => setOpen(false)}
-                        />
-                      </div>
-
-                    </Container>
-                  </div>
-
-                  <Container className='mt-6'>
-                    {
-                      menuItems.map((item, i) => {
-                        return (
-                          <div key={i} className='flex items-center p-4 gap-6 border-b border-[#f0f0f0]'>
-                            <div className='text-[#414141]'>
-                              {item.icon}
-                            </div>
-                            <Link
-                              className='text-xl text-[#414141] font-normal duration-100'
-                              href={"#" + item.href}
-                            >
-                              {item.label}
-                            </Link>
+                <Dialog.Panel className="pointer-events-auto w-screen" inert>
+                  <Container className="bg-white absolute pt-5 top-0 h-screen">
+                    {menuItems.map((item, i) => {
+                      return (
+                        <div key={i} className="flex items-center p-4 gap-6 border-b border-[#f0f0f0]">
+                          <div className="text-[#414141]">
+                            {item.icon}
                           </div>
-                        )
-                      })
-                    }
+                          <Link
+                            className="text-xl text-[#414141] font-normal duration-100"
+                            to={item.href}
+                          >
+                            {item.label}
+                          </Link>
+                        </div>
+                      );
+                    })}
                   </Container>
                 </Dialog.Panel>
               </Transition.Child>
@@ -101,5 +77,5 @@ export default function MobileMenu({ open, setOpen }) {
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }

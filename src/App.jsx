@@ -1,12 +1,14 @@
-import MobileMenu from "./components/common/MobileMenu"
 import Navbar from "./components/layout/Navbar"
+import Hero from "./components/sections/Hero"
+import Winners from "./components/sections/Winners"
 
 const App = () => {
   return (
     <>
       <div>
         <Navbar />
-        {/* <MobileMenu /> */}
+        <Hero />
+        <Winners />
       </div>
     </>
   )

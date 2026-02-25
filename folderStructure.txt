@@ -1,0 +1,54 @@
+src/
+├── assets/
+│   ├── images/
+│   │   ├── hero/
+│   │   │   ├── hero-banner.jpg
+│   │   │   └── hero-banner.webp
+│   │   ├── services/
+│   │   │   ├── consultation.jpg
+│   │   │   └── visa-support.jpg
+│   │   ├── countries/
+│   │   │   ├── germany.jpg
+│   │   │   ├── poland.jpg
+│   │   │   └── turkey.jpg
+│   │   └── testimonials/
+│   │       ├── student-1.jpg
+│   │       └── student-2.jpg
+│   └── icons/
+│       ├── logo.svg
+│       ├── phone.svg
+│       └── email.svg
+│
+├── components/
+│   ├── common/
+│   │   ├── OptimizedImage.jsx
+│   │   ├── Button.jsx
+│   │   ├── SectionTitle.jsx
+│   │   └── Card.jsx
+│   │
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   │
+│   └── sections/
+│       ├── Hero.jsx
+│       ├── About.jsx
+│       ├── Services.jsx
+│       ├── Countries.jsx
+│       ├── Process.jsx
+│       ├── Testimonials.jsx
+│       ├── FAQ.jsx
+│       └── Contact.jsx
+│
+├── hooks/
+│   └── useScrollAnimation.js  (optional - scroll effects)
+│
+├── utils/
+│   ├── constants.js  (e-mail, telefon, Calendly link)
+│   └── emailService.js  (form göndərmə logic)
+│
+├── styles/
+│   └── index.css  (global styles)
+│
+├── App.jsx
+└── main.jsx
