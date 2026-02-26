@@ -18,7 +18,7 @@ function Hero() {
 
             {/* Content Overlay */}
             <Container>
-                <div className="h-[60vh] lg:h-[70vh] xl:h-[85vh] py-15 relative z-10 flex flex-col justify-between md:justify-center md:gap-10 max-w-md">
+                <div className="h-[70vh] xl:h-[85vh] py-15 relative z-10 flex flex-col justify-between md:justify-center md:gap-10 max-w-md">
                     <div className='text-black w-[70%] md:w-[80%] lg:w-full flex flex-col gap-5'>
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                             Xaricdə təhsil arzunu gerçəkləşdir!
