@@ -58,17 +58,15 @@ body {
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 2rem;
-    transform: translateY(100%); /* Initially hide the overlay */
-    transition: transform 0.4s ease-in-out; /* Smooth transition */
+    transform: translateY(100%);
+    /* Initially hide the overlay */
+    transition: transform 0.4s ease-in-out;
+    /* Smooth transition */
 }
 
-#cardShortText {transition: 0.4s;}
-
-.swiper-slide:hover #cardTextOverlay {
-    transform: translateY(0); /* Slide the overlay up */
+#cardShortText {
+    transition: 0.4s;
 }
-
-.swiper-slide:hover #cardShortText {transform: translateY(100%)}
 
 .swiper-slide img {
     display: block;
@@ -77,8 +75,23 @@ body {
     object-fit: cover;
 }
 
+
 @media (max-width: 490px) {
-    .swiper-button-next, .swiper-button-prev {
+
+    .swiper-button-next,
+    .swiper-button-prev {
         display: none !important;
     }
+}
+
+
+@media (min-width: 768px) {
+    .swiper-slide:hover #cardTextOverlay {
+        transform: translateY(0%);  /* Slide the overlay up */
+    }
+
+    .swiper-slide:hover #cardShortText {
+        transform: translateY(100%)  /* Slide the text down */
+    }
+
 }

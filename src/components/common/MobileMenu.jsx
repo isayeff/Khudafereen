@@ -1,26 +1,9 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { IoCloseOutline, IoMenu } from 'react-icons/io5';
 import { Container } from './Container';
-import { GoHome } from 'react-icons/go';
-import { MdOutlineMedicalServices } from 'react-icons/md';
-import { GoTrophy } from 'react-icons/go';
-import { BsGlobe } from 'react-icons/bs';
-import { AiOutlineFileSearch } from 'react-icons/ai';
-import { GoQuestion } from 'react-icons/go';
-import { LuMessageSquareMore } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
 
-export default function MobileMenu({ open, setOpen }) {
-  const menuItems = [
-    { label: 'Haqqımızda', href: '#haqqimizda', icon: <GoHome size={30} /> },
-    { label: 'Xidmətlərimiz', href: '#xidmetler', icon: <MdOutlineMedicalServices size={30} /> },
-    { label: 'Nəticələrimiz', href: '#neticeler', icon: <GoTrophy size={30} /> },
-    { label: 'Ölkələr', href: '#olkeler', icon: <BsGlobe size={30} /> },
-    { label: 'Paketlər', href: '#paketler', icon: <AiOutlineFileSearch size={30} /> },
-    { label: 'FAQ', href: '#faq', icon: <GoQuestion size={30} /> },
-    { label: 'Əlaqə', href: '#elaqe', icon: <LuMessageSquareMore size={30} /> }
-  ];
+export default function MobileMenu({ open, setOpen, menuItems }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>

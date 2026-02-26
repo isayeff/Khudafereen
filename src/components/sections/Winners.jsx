@@ -47,7 +47,7 @@ function Winners() {
                             slidesPerView: 3,
                             spaceBetween: 40,
                         },
-                        1024: {
+                        1280: {
                             slidesPerView: 4,
                             spaceBetween: 40,
                         },
