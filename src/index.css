@@ -102,3 +102,9 @@ body {
     height: 70vh;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .hero-image {
+    height: 70vh; 
+  }
+}
