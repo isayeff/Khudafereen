@@ -95,3 +95,10 @@ body {
     }
 
 }
+
+/* For Safari */
+@media not all and (min-resolution: .001dpcm) { 
+  #heroContent {
+    height: 70vh;
+  }
+}

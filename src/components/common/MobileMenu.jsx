@@ -7,7 +7,7 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="z-10 bg-white absolute top-[78.74px]" onClose={() => setOpen(false)} static>
+      <Dialog as="div" className="z-10 bg-white absolute top-[12vh]" onClose={() => setOpen(false)} static>
         {/* Backdrop */}
         <Transition.Child
           as={Fragment}
