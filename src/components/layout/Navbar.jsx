@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="xuduBg flex items-center h-[12vh] relative">
+      <nav className="xuduBg flex items-center h-[12dvh] relative">
         <Container>
           <div className="flex justify-between items-center text-white">
             <div>

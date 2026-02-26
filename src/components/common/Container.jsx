@@ -19,8 +19,3 @@ export function Container({ children, size = 'default', className = '' }) {
     </div>
   );
 }
-
-// İstifadə:
-<Container size="default">
-  <h1>Content</h1>
-</Container>
