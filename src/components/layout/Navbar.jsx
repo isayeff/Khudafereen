@@ -40,7 +40,7 @@ function Navbar() {
                 src={"/logos/logo.png"}
                 alt="Khudaferin Logo - Official brand logo of Khudaferin"
                 title="Khudaferin Logo"
-                className="w-24 md:w-30 h-auto"
+                className="w-24 lg:w-30 h-auto"
                 loading="lazy"
               />
             </div>

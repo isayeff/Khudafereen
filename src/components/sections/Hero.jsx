@@ -18,7 +18,7 @@ function Hero() {
 
             {/* Content Overlay */}
             <Container>
-                <div className="h-[70vh] xl:h-[85vh] py-15 relative z-10 flex flex-col justify-between md:justify-center md:gap-10 max-w-md">
+                <div className="h-[80vh] xl:h-[85vh] py-15 relative z-10 flex flex-col justify-between md:justify-center md:gap-10 max-w-md">
                     <div className='text-black w-[70%] md:w-[80%] lg:w-full flex flex-col gap-5'>
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                             Xaricdə təhsil arzunu gerçəkləşdir!
@@ -33,7 +33,7 @@ function Hero() {
                         <button className="bg-teal-700 w-1/2 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors">
                             İlk addımı at
                         </button>
-                        <button className="bg-[#ffffffc2] xuduText border-1 border-[bg-teal-800] w-1/2 hover:bg-gray-100 font-semibold py-3 rounded transition-colors flex items-center justify-center gap-2">
+                        <button className="bg-[#ffffffc2] xuduText border border-[bg-teal-800] w-1/2 hover:bg-gray-100 font-semibold py-3 rounded transition-colors flex items-center justify-center gap-2">
                             Paketlərimiz
                             <span>→</span>
                         </button>

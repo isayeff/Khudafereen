@@ -44,7 +44,7 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
                             {item.icon}
                           </div>
                           <Link
-                            className="text-xl text-[#414141] font-normal duration-100"
+                            className="text-[#414141] font-normal duration-100"
                             to={item.href}
                           >
                             {item.label}
