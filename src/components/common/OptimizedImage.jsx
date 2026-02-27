@@ -1,4 +1,3 @@
-// components/OptimizedImage.jsx
 export function OptimizedImage({ 
   src,        // /images/hero (extension olmadan)
   alt, 

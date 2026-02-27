@@ -44,7 +44,7 @@ function Services() {
                         {
                             serviceCards.map((item, i) => {
                                 return (
-                                    <div className='bg-[#F7FAFA] flex p-4 rounded-xl w-full md:w-96'>
+                                    <div key={i} className='bg-[#F7FAFA] flex p-4 rounded-xl w-full md:w-96'>
                                         <div className='flex flex-col max-h-45 justify-between w-7/12'>
                                             <GoArrowUpRight color='white' size={40} className='xuduBg p-1 rounded-full' />
                                             <div>
