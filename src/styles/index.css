@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+html.fixed {
+    max-height: 100vh !important;
+    max-height: 100svh !important;
+    overflow: hidden;
+}
+
+body {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --xuduColor: #16706F;
+}
+
+.xuduText {
+    color: var(--xuduColor);
+}
+
+.xuduBg {
+    background-color: var(--xuduColor);
+}
+
+/* SWIPER CSS GENERAL STYLES */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+    

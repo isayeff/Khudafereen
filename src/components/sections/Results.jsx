@@ -5,6 +5,7 @@ import { Container } from "../common/Container";
 const STATS = [
     { target: 2000, suffix: "", label: "tələbə" },
     { target: 30, suffix: "+", label: "təqaüd proqramı" },
+    { target: 50, suffix: "+", label: "partner universitet" },
     { target: 90, suffix: "%", label: "qəbul göstəricisi" },
 ];
 
@@ -37,7 +38,7 @@ function StatItem({ target, suffix, label, delay, isVisible }) {
             <span ref={spanRef} className="text-6xl font-bold tracking-tight text-neutral-800">
                 0{suffix}
             </span>
-            <span className="text-sm text-neutral-400">{label}</span>
+            <span className="text-sm capitalize text-neutral-400">{label}</span>
         </div>
     );
 }
@@ -71,7 +72,7 @@ export default function Results() {
                                 ən böyük ilham mənbəyidir.`}
                     />
                 </div>
-                <section ref={ref} className="flex flex-col md:flex-row justify-center md:gap-[15vw] items-center gap-10 py-10">
+                <section ref={ref} className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 py-10">
                     {STATS.map((stat, i) => (
                         <StatItem key={stat.label} {...stat} delay={i * 200} isVisible={isVisible} />
                     ))}

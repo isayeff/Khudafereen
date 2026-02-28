@@ -1,4 +1,4 @@
-import React from 'react'
+import '../../styles/winSwiper.css'
 import { Container } from '../common/Container'
 
 // Import Swiper React components
@@ -59,13 +59,13 @@ function Winners() {
                             },
                         }}
                         modules={[Autoplay, Navigation]}
-                        className="mySwiper"
+                        className="mySwiper1"
                     >
 
                         {
                             winnersData.map((item) => {
                                 return (
-                                    <SwiperSlide className='relative z-1'>
+                                    <SwiperSlide key={item.id} className='relative z-1'>
                                         <div className='w-full h-full relative'>
                                             <div className='h-100'>
                                                 <img src={item.imgPath} alt="" />
