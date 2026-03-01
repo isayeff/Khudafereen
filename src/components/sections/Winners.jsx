@@ -6,10 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { winnersData } from '../../data/siteData';
 import Title from '../common/Title';
 
@@ -39,26 +38,25 @@ function Winners() {
                             delay: 3500,
                             disableOnInteraction: false,
                         }}
-                        navigation={true}
                         breakpoints={{
                             100: {
                                 slidesPerView: 1.2,
-                                spaceBetween: 20,
+                                spaceBetween: 30,
                             },
                             490: {
                                 slidesPerView: 2,
-                                spaceBetween: 40,
+                                spaceBetween: 30,
                             },
                             768: {
                                 slidesPerView: 3,
-                                spaceBetween: 40,
+                                spaceBetween: 30,
                             },
                             1280: {
                                 slidesPerView: 4,
-                                spaceBetween: 40,
+                                spaceBetween: 30,
                             },
                         }}
-                        modules={[Autoplay, Navigation]}
+                        modules={[Autoplay]}
                         className="mySwiper1"
                     >
 
@@ -75,7 +73,7 @@ function Winners() {
                                                     {item.name}
                                                 </div>
                                                 <div className='text-[12px] pl-2'>
-                                                    • {item.shortText}
+                                                    <span className='font-bold'>•</span> {item.shortText}
                                                 </div>
                                             </div>
                                             <div id='cardTextOverlay'>

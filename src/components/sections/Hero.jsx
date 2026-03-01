@@ -30,7 +30,7 @@ function Hero() {
 
                     {/* Buttons */}
                     <div className="flex gap-4 text-sm md:text-[1rem] w-full items-center justify-center">
-                        <button className="bg-teal-700 w-1/2 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors">
+                        <button className="xuduBg w-1/2 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors">
                             İlk addımı at
                         </button>
                         <button className="bg-[#ffffffc2] xuduText border border-[bg-teal-800] w-1/2 hover:bg-gray-100 font-semibold py-3 rounded transition-colors flex items-center justify-center gap-2">
