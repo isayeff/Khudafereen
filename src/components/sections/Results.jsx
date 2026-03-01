@@ -1,13 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Title from "../common/Title";
 import { Container } from "../common/Container";
+import { STATS } from "../../data/siteData";
 
-const STATS = [
-    { target: 2000, suffix: "", label: "tələbə" },
-    { target: 30, suffix: "+", label: "təqaüd proqramı" },
-    { target: 50, suffix: "+", label: "partner universitet" },
-    { target: 90, suffix: "%", label: "qəbul göstəricisi" },
-];
 
 function StatItem({ target, suffix, label, delay, isVisible }) {
     const spanRef = useRef(null);
@@ -63,7 +58,7 @@ export default function Results() {
 
     return (
         <>
-            <Container>
+            <Container className="my-10">
                 <div>
                     <Title
                         title={"Nəticələrimizlə qürur duyuruq!"}
@@ -72,7 +67,7 @@ export default function Results() {
                                 ən böyük ilham mənbəyidir.`}
                     />
                 </div>
-                <section ref={ref} className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-10 py-10">
+                <section ref={ref} className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-10">
                     {STATS.map((stat, i) => (
                         <StatItem key={stat.label} {...stat} delay={i * 200} isVisible={isVisible} />
                     ))}

@@ -1,5 +1,7 @@
 import Navbar from "./components/layout/Navbar"
+import Contact from "./components/sections/Contact"
 import Countries from "./components/sections/Countries"
+import Faq from "./components/sections/Faq"
 import Hero from "./components/sections/Hero"
 import Packages from "./components/sections/Packages"
 import Results from "./components/sections/Results"
@@ -16,6 +18,8 @@ const App = () => {
         <Results />
         <Countries />
         <Packages />
+        <Faq />
+        <Contact />
     </>
   )
 }

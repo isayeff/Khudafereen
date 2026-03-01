@@ -15,7 +15,7 @@ import Title from '../common/Title';
 function Winners() {
     return (
         <>
-            <div className='mt-20 mb-30'>
+            <div className='my-20'>
                 <Container className='flex flex-col justify-center items-center text-center gap-5'>
                     <Title
                         title={"Haqqımızda və Uğurlarımız"}

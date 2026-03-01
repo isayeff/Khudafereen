@@ -1,36 +1,9 @@
 import { GoArrowUpRight } from 'react-icons/go';
 import { Container } from '../common/Container'
 import Title from '../common/Title';
+import { serviceCards } from '../../data/siteData';
 
 function Services() {
-
-    const serviceCards = [
-        {
-            title: "Təqaüd İmkanı",
-            description: "Daha əlçatan təhsil üçün müxtəlif təqaüd imkanları təqdim edirik.",
-            image: "/servicesImgs/image8.svg",
-        },
-        {
-            title: "Qəbul Zəmanəti",
-            description: "Seçdiyiniz universitetə qəbul olunma şansınızı maksimuma çatdırırıq.",
-            image: "/servicesImgs/image11.svg",
-        },
-        {
-            title: "Hər zaman dəstək!",
-            description: "Hər bir proses zamanı dəstək üçün yanınızdayıq.",
-            image: "/servicesImgs/image7.svg",
-        },
-        {
-            title: "Ən çox tərəfdaş universitetlər",
-            description: "Minlərlə tələbənin seçdiyi nüfuzlu ali məktəblərlə əməkdaşlıq edirik.",
-            image: "/servicesImgs/image6.svg",
-        },
-        {
-            title: "Sənəd hazırlığı",
-            description: "Bütün müraciət sənədlərinizi peşəkar şəkildə tam və düzgün hazırlayırıq.",
-            image: "/servicesImgs/image10.svg",
-        }
-    ];
 
     return (
         <>

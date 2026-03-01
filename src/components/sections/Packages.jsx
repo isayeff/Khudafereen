@@ -12,94 +12,17 @@ import { Autoplay } from 'swiper/modules';
 
 import Flag from 'react-world-flags'
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
+import { packagesData } from "../../data/siteData";
 
 function Packages() {
-
-    const packagesData = [
-        {
-            id: 1,
-            name: "8 Noyabr",
-            details: [
-                "Araşdırma",
-                "5-ə qədər universitetə müraciət",
-                "Motivasiya və CV məktublarının hazırlanması",
-                "Universitetlərlə yazışmalar və əlaqələrin idarə olunması"
-            ]
-        },
-        {
-            id: 2,
-            name: "9 Noyabr",
-            details: [
-                "Araşdırma",
-                "8-ə qədər universitetə müraciət",
-                "Motivasiya və CV məktublarının hazırlanması",
-                "Universitetlərlə yazışmalar və əlaqələrin idarə olunması",
-                "Yataqxana müraciəti"
-            ]
-        },
-        {
-            id: 3,
-            name: "10 Noyabr (Premium)",
-            details: [
-                "Araşdırma",
-                "Limitsiz sayda universitetə müraciət",
-                "Limitsiz sayda akademik təqaüdə müraciət",
-                "Motivasiya məktubunun hazırlanması",
-                "CV hazırlanması",
-                "IELTS qeydiyyatına dəstək (BC)",
-                "Müsahibə hazırlığı (DP, HTP, Viza)",
-                "Partner universitetlərdə xüsusi dəstək",
-                "Yataqxana müraciəti (rəsmi)",
-                "Viza dəstəyi"
-            ]
-        },
-        {
-            id: 4,
-            name: "PhD - 8 Noyabr",
-            details: [
-                "Araşdırma",
-                "Öz universitetlərə müraciət",
-                "Viza dəstəyi",
-                "Təqaüd müraciəti",
-                "Motivasiya məktubunun hazırlanması"
-            ]
-        },
-        {
-            id: 5,
-            name: "PhD - 9 Noyabr",
-            details: [
-                "Araşdırma",
-                "Öz universitetlərə müraciət",
-                "Professorla danışıq aparılması",
-                "Research proposal hazırlanmasına nəzarət",
-                "Viza dəstəyi",
-                "Təqaüd müraciəti",
-                "Motivasiya məktubunun hazırlanması"
-            ]
-        },
-        {
-            id: 6,
-            name: "PhD - 9 Noyabr (Ingilətərə, Amerikaya)",
-            details: [
-                "Araşdırma",
-                "İngiltərə, Amerika daxil olmaqla digər ölkələrin özəl və dövlət universitetlərinə müraciət",
-                "Professorla danışıq aparılması",
-                "Research proposal hazırlanmasına nəzarət",
-                "Viza dəstəyi",
-                "Təqaüd müraciəti",
-                "Motivasiya məktubunun hazırlanması"
-            ]
-        }
-    ]
-
     return (
         <>
             <Container className="my-10">
                 <div>
                     <Title
-                        title={"Bu ölkələrdə təhsil ala bilərsən"}
-                        description={`Dünyanın aparıcı universitetlərində təhsil 
-                                    almaq fürsətini sizə təqdim edirik.`}
+                        title={"Sənin üçün uyğun paket seç"}
+                        description={`Fərqli ehtiyaclara uyğun hazırlanmış ödəniş paketlərimizi kəşf edin.
+                                      Gələcəyiniz üçün ən uyğun planı seçin.`}
                     />
                 </div>
                 <div>
@@ -135,7 +58,7 @@ function Packages() {
                         {
                             packagesData.map((item) => {
                                 return (
-                                    <SwiperSlide key={item.id} className='mb-40 rounded-sm border border-[#959595]'>
+                                    <SwiperSlide key={item.id} className='rounded-sm border border-[#959595]'>
                                         <div className="min-h-130 flex flex-col justify-between w-full p-5">
                                             <div className="flex flex-col gap-2">
                                                 <div className="text-[#414141] text-xl font-bold flex justify-between gap-3">
