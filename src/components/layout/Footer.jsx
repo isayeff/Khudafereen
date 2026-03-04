@@ -21,7 +21,12 @@ function Footer() {
           <div>
             <div className="flex justify-between items-start">
               <div className="w-50">
-                <img className="w-full" src="/logos/logoNav.svg" alt="" />
+                <img
+                  className="w-full"
+                  src="/logos/logoNav.svg"
+                  alt="Khudaferin Logo - Official brand logo of Khudaferin"
+                  loading="lazy"
+                />
               </div>
               <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-10 md:gap-x-30 text-white">
                 {

@@ -66,7 +66,11 @@ function Winners() {
                                     <SwiperSlide key={item.id} className='relative z-1'>
                                         <div className='w-full h-full relative'>
                                             <div className='h-100'>
-                                                <img src={item.imgPath} alt="" />
+                                                <img
+                                                    src={item.imgPath}
+                                                    alt="Khudafereen winners"
+                                                    loading='lazy'
+                                                />
                                             </div>
                                             <div id='cardShortText' className='text-white text-start p-2 absolute bottom-0 translate-y-0 z-100'>
                                                 <div className='font-bold'>

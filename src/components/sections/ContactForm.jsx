@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container } from '../common/Container';
 import { CONTACT_INFO } from '../../data/siteData';
 
-const {email, phone, phoneAlt, address, workingHours, social} = CONTACT_INFO
+const { email, phone, phoneAlt, address, workingHours, social } = CONTACT_INFO
 
 const SuccessPage = ({ onBack }) => (
     <div
@@ -136,7 +136,10 @@ export default function ContactForm() {
     const labelStyle = "text-white text-sm font-medium mb-2 block";
 
     return (
-        <div className="my-20 relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-cover bg-center" style={{ backgroundImage: 'url("/contact/contactBG.png")' }}>
+        <div
+            className="my-20 relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-cover bg-center"
+            style={{ backgroundImage: 'url("/contact/contactBG.png")' }}
+        >
 
             {/* Container */}
             <Container>

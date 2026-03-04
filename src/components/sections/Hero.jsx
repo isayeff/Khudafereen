@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../common/Container';
 
 function Hero() {
@@ -10,6 +9,7 @@ function Hero() {
                     src="/hero/heroImage.png"
                     alt="Graduate student"
                     className="w-full h-full object-cover object-[70%_center]"
+                    loading='lazy'
                 />
             </div>
 

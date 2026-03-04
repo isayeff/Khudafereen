@@ -26,7 +26,12 @@ function Services() {
                                             </div>
                                         </div>
                                         <div className='w-5/12'>
-                                            <img className='w-full h-full object-cover' src={item.image} alt="" />
+                                            <img
+                                                className='w-full h-full object-cover'
+                                                src={item.image}
+                                                alt="Khudafereen services"
+                                                loading='lazy'
+                                            />
                                         </div>
                                     </div>
                                 )
