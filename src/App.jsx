@@ -1,5 +1,6 @@
+import Footer from "./components/layout/Footer"
 import Navbar from "./components/layout/Navbar"
-import Contact from "./components/sections/Contact"
+import ContactForm from "./components/sections/ContactForm"
 import Countries from "./components/sections/Countries"
 import Faq from "./components/sections/Faq"
 import Hero from "./components/sections/Hero"
@@ -19,7 +20,8 @@ const App = () => {
         <Countries />
         <Packages />
         <Faq />
-        <Contact />
+        <ContactForm />
+        <Footer />
     </>
   )
 }
