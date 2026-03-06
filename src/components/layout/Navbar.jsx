@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import MobileMenu from "../common/MobileMenu";
 import { Spin as Hamburger } from 'hamburger-react'
 import { GoHome } from 'react-icons/go';
@@ -15,6 +15,31 @@ import { scrollToSection } from "../../utils/helpers";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 10) {
+        // Always show at the very top
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling DOWN → hide + close mobile menu
+        setVisible(false);
+        setOpen(false);
+      } else {
+        // Scrolling UP → show
+        setVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { label: 'Haqqımızda', href: 'haqqimizda', icon: <GoHome size={30} /> },
@@ -28,19 +53,23 @@ function Navbar() {
 
   return (
     <>
-      <nav className="xuduBg sticky top-0 z-50 flex items-center h-[12svh]">
+      <nav
+        className={`xuduBg sticky top-0 z-50 flex items-center h-[12svh]
+          transition-transform duration-300 ease-in-out
+          ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+      >
         <Container>
           <div className="flex justify-between items-center text-white">
 
             {/* Logo */}
-            <a href={"/"}> 
+            <div>
               <img
                 src={"/logos/logoNav.svg"}
                 alt="Khudaferin Logo - Official brand logo of Khudaferin"
                 title="Khudaferin Logo"
                 className="w-24 lg:w-30 h-auto"
               />
-            </a>
+            </div>
 
             {/* Hamburger — mobile only */}
             <div className="block lg:hidden">
