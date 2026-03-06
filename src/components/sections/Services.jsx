@@ -7,7 +7,7 @@ function Services() {
 
     return (
         <>
-            <div className='bg-[#E8F1F1]'>
+            <div id='xidmetler' className='bg-[#E8F1F1]'>
                 <Container>
                     <Title
                         title={"Niyə Biz?"}
@@ -20,9 +20,9 @@ function Services() {
                                     <div key={i} className='bg-[#F7FAFA] flex p-4 rounded-xl w-full md:w-96'>
                                         <div className='flex flex-col max-h-45 justify-between w-7/12'>
                                             <GoArrowUpRight color='white' size={40} className='xuduBg p-1 rounded-full' />
-                                            <div>
+                                            <div className='w-[95%]'>
                                                 <div className='text-[18px] text-[#414141] font-bold'>{item.title}</div>
-                                                <div className='text-[13px] text-[#898A8C] w-[95%]'>{item.description}</div>
+                                                <div className='text-[13px] text-[#898A8C]'>{item.description}</div>
                                             </div>
                                         </div>
                                         <div className='w-5/12'>

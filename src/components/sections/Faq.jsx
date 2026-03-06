@@ -11,7 +11,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
         >
             <button
                 onClick={onToggle}
-                className="w-full flex items-center justify-between px-6 py-5 text-left group"
+                className="w-full flex cursor-pointer items-center justify-between px-6 py-5 text-left group"
                 aria-expanded={isOpen}
             >
                 <span
@@ -71,24 +71,26 @@ export default function Accordion() {
     };
 
     return (
-        <Container>
-            <Title
-                title={"FAQ"}
-                description={"Sizin üçün ən vacib sualları topladıq və ətraflı cavablandırdıq"}
-            />
-
-            <div className="w-full mx-auto">
-                <div className="flex flex-col gap-2">
-                    {faqData.map((item) => (
-                        <AccordionItem
-                            key={item.id}
-                            item={item}
-                            isOpen={openId === item.id}
-                            onToggle={() => handleToggle(item.id)}
-                        />
-                    ))}
+        <div id="faq">
+            <Container>
+                <Title
+                    title={"FAQ"}
+                    description={"Sizin üçün ən vacib sualları topladıq və ətraflı cavablandırdıq"}
+                />
+            
+                <div className="w-full mx-auto">
+                    <div className="flex flex-col gap-2">
+                        {faqData.map((item) => (
+                            <AccordionItem
+                                key={item.id}
+                                item={item}
+                                isOpen={openId === item.id}
+                                onToggle={() => handleToggle(item.id)}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+        </div>
     );
 }

@@ -12,13 +12,14 @@ import { Autoplay } from 'swiper/modules';
 
 import Flag from 'react-world-flags'
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
-import { packagesData } from "../../data/siteData";
+import { CALENDLY_LINK, packagesData } from "../../data/siteData";
+import { Link } from "react-router-dom";
 
 function Packages() {
     return (
         <>
             <Container className="my-10">
-                <div>
+                <div id="paketler" >
                     <Title
                         title={"Sənin üçün uyğun paket seç"}
                         description={`Fərqli ehtiyaclara uyğun hazırlanmış ödəniş paketlərimizi kəşf edin.
@@ -84,7 +85,9 @@ function Packages() {
                                                 </div>
                                             </div>
                                             <button className="xuduBg w-full hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors">
-                                                İlk addımı at
+                                                <Link to={CALENDLY_LINK} target="_blank">
+                                                    Ödənişsiz Konsultasiya
+                                                </Link>
                                             </button>
                                         </div>
                                     </SwiperSlide>

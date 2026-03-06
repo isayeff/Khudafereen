@@ -137,6 +137,7 @@ export default function ContactForm() {
 
     return (
         <div
+            id='elaqe'
             className="my-20 relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-cover bg-center"
             style={{ backgroundImage: 'url("/contact/contactBG.png")' }}
         >
@@ -224,7 +225,7 @@ export default function ContactForm() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="xuduBg w-full md:w-2/3 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors"
+                            className="xuduBg cursor-pointer w-full md:w-2/3 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors"
                         >
                             {loading ? 'Göndərilir...' : 'Göndər'}
                         </button>

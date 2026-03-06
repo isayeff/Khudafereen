@@ -17,7 +17,7 @@ function Countries() {
     return (
         <>
             <Container>
-                <div>
+                <div id="olkeler">
                     <Title
                         title={"Bu ölkələrdə təhsil ala bilərsən"}
                         description={`Dünyanın aparıcı universitetlərində təhsil 

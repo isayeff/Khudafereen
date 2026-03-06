@@ -1,13 +1,19 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Container } from './Container';
-import { Link } from 'react-router-dom';
+import { scrollToSection } from '../../utils/helpers';
 
 export default function MobileMenu({ open, setOpen, menuItems }) {
+  
+  const handleClick = (href) => {
+    scrollToSection(href); // smooth scroll
+    setOpen(false);   // close the menu
+  };
 
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="z-10 bg-white fixed top-[12dvh]" onClose={() => setOpen(false)} static>
+
         {/* Backdrop */}
         <Transition.Child
           as={Fragment}
@@ -23,41 +29,38 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
 
         <div className="fixed overflow-hidden">
           <div className="absolute overflow-hidden">
-            {/* Soldan sağa açılması üçün left-0 və pr-10 */}
             <div className="pointer-events-none fixed left-0 flex max-w-full">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
-                enterFrom="-translate-x-full"  // ← Soldan gəlir
+                enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
                 leave="transform transition ease-in-out duration-500 sm:duration-700"
                 leaveFrom="translate-x-0"
-                leaveTo="-translate-x-full"    // ← Sola gedir
+                leaveTo="-translate-x-full"
               >
-                {/* w-screen = full width */}
-                <Dialog.Panel className="pointer-events-auto w-screen" inert>
+                <Dialog.Panel className="pointer-events-auto w-screen">
                   <Container className="bg-white absolute pt-5 top-0 h-screen">
-                    {menuItems.map((item, i) => {
-                      return (
-                        <div key={i} className="flex items-center p-4 gap-6 border-b border-[#f0f0f0]">
-                          <div className="text-[#414141]">
-                            {item.icon}
-                          </div>
-                          <Link
-                            className="text-[#414141] font-normal duration-100"
-                            to={item.href}
-                          >
-                            {item.label}
-                          </Link>
+                    {menuItems.map((item, i) => (
+                      <div key={i} className="flex items-center p-4 gap-6 border-b border-[#f0f0f0]">
+                        <div className="text-[#414141]">
+                          {item.icon}
                         </div>
-                      );
-                    })}
+                        <button
+                          className="text-[#414141] font-normal duration-100 hover:opacity-70 transition-opacity"
+                          onClick={() => handleClick(item.href)}
+                        >
+                          {item.label}
+                        </button>
+                      </div>
+                    ))}
                   </Container>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
           </div>
         </div>
+
       </Dialog>
     </Transition.Root>
   );

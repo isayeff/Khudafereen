@@ -1,18 +1,29 @@
 import { FaFacebook, FaInstagram, FaTelegram, FaTiktok, FaWhatsapp } from "react-icons/fa"
 import { Link } from "react-router-dom";
 import { Container } from "../common/Container";
+import { scrollToSection } from "../../utils/helpers";
+import { CONTACT_INFO } from "../../data/siteData";
 
 function Footer() {
 
   const menuItems = [
-    { label: 'Haqqımızda', href: '#haqqimizda' },
-    { label: 'Xidmətlərimiz', href: '#xidmetler' },
-    { label: 'Nəticələrimiz', href: '#neticeler', },
-    { label: 'Ölkələr', href: '#olkeler' },
-    { label: 'Paketlər', href: '#paketler' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Əlaqə', href: '#elaqe' }
+    { label: 'Haqqımızda', href: 'haqqimizda' },
+    { label: 'Xidmətlərimiz', href: 'xidmetler' },
+    { label: 'Nəticələrimiz', href: 'neticeler', },
+    { label: 'Ölkələr', href: 'olkeler' },
+    { label: 'Paketlər', href: 'paketler' },
+    { label: 'FAQ', href: 'faq' },
+    { label: 'Əlaqə', href: 'elaqe' }
   ];
+
+  const { instagram, facebook, whatsapp, tiktok } = CONTACT_INFO.social
+
+  const mediaButtons = [
+    { link: instagram, icon: <FaInstagram /> },
+    { link: facebook, icon: <FaFacebook /> },
+    { link: tiktok, icon: <FaTiktok /> },
+    { link: whatsapp, icon: <FaWhatsapp /> }
+  ]
 
   return (
     <>
@@ -32,8 +43,12 @@ function Footer() {
                 {
                   menuItems.map((item, i) => {
                     return (
-                      <li key={i}>
-                        <Link to={item.href}>{item.label}</Link>
+                      <li
+                        key={i}
+                        className="cursor-pointer"
+                        onClick={() => scrollToSection(item.href)}
+                      >
+                        {item.label}
                       </li>
                     )
                   })
@@ -41,11 +56,20 @@ function Footer() {
               </ul>
             </div>
             <div className="flex justify-center md:justify-start items-center gap-7 ml-2 mt-15 text-white text-3xl md:text-2xl">
-              <FaInstagram />
-              <FaFacebook />
-              <FaTelegram />
-              <FaTiktok />
-              <FaWhatsapp />
+              {
+                mediaButtons.map((item, i) => {
+                  return (
+                    <Link
+                      className="hover:scale-120 transition-all"
+                      to={item.link}
+                      target="_blank"
+                      key={i}
+                    >
+                      {item.icon}
+                    </Link>
+                  )
+                })
+              }
             </div>
           </div>
         </Container>

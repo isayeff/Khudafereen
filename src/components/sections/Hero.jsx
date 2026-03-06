@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Container } from '../common/Container';
+import { scrollToSection } from '../../utils/helpers';
 
 function Hero() {
     return (
@@ -30,10 +32,10 @@ function Hero() {
 
                     {/* Buttons */}
                     <div className="flex gap-4 text-sm md:text-[1rem] w-full items-center justify-center">
-                        <button className="xuduBg w-1/2 hover:bg-teal-800 text-white font-semibold py-3 rounded transition-colors">
-                            İlk addımı at
+                        <button onClick={() => scrollToSection("olkeler")} className="xuduBg w-1/2 cursor-pointer hover:bg-[#115b58]! hover:scale-105 transition-all text-white font-semibold py-3 rounded">
+                            Ölkələr
                         </button>
-                        <button className="bg-[#ffffffc2] xuduText border border-[bg-teal-800] w-1/2 hover:bg-gray-100 font-semibold py-3 rounded transition-colors flex items-center justify-center gap-2">
+                        <button onClick={() => scrollToSection("paketler")} className="bg-[#ffffffc2] cursor-pointer  xuduText border border-[bg-teal-800] w-1/2 hover:bg-gray-100! hover:scale-105 hover:shadow-xl transition-all font-semibold py-3 rounded flex items-center justify-center gap-2">
                             Paketlərimiz
                             <span>→</span>
                         </button>

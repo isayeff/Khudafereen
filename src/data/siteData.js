@@ -115,8 +115,8 @@ const serviceCards = [
     image: "/servicesImgs/image11.svg",
   },
   {
-    title: "Hər zaman dəstək!",
-    description: "Hər bir proses zamanı dəstək üçün yanınızdayıq.",
+    title: "Hissəli ödəmə imkanı ",
+    description: "Tələbələrimiz üçün ödəmə rahatlığı təqdim edirik.",
     image: "/servicesImgs/image7.svg",
   },
   {
@@ -434,7 +434,6 @@ const CONTACT_INFO = {
   phone: '+994 70 387 38 37',
   phoneAlt: '+994 50 747 47 44',
   address: 'Nizami Street, Baku',
-  calendlyLink: 'https://calendly.com/khudafereen/konsultasiya',
 
   workingHours: {
     weekday: 'Monday to Friday: 09:00 - 18:00',
@@ -442,11 +441,14 @@ const CONTACT_INFO = {
   },
 
   social: {
-    instagram: 'https://instagram.com/thekhudafereen',
-    whatsapp: 'https://wa.me/994703873837',
-    facebook: 'https://facebook.com/thekhudafereen'
+    instagram: 'https://www.instagram.com/thekhudafereen',
+    whatsapp: 'https://wa.me/994706066625',
+    facebook: 'https://www.facebook.com/thekhudafereen',
+    tiktok: 'https://www.tiktok.com/@thekhudafereen'
   }
 };
+
+export const CALENDLY_LINK = "https://calendly.com/thekhudafereen/khuda"
 
 
 export {

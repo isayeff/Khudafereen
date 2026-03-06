@@ -59,7 +59,7 @@ export default function Results() {
     return (
         <>
             <Container className="my-10">
-                <div>
+                <div id="neticeler">
                     <Title
                         title={"Nəticələrimizlə qürur duyuruq!"}
                         description={`Qürurla təqdim edirik: xaricdə təhsil yolunda yüzlərlə 

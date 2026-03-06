@@ -15,13 +15,18 @@ import Title from '../common/Title';
 function Winners() {
     return (
         <>
-            <div className='my-20'>
+            <div id='haqqimizda' className='my-20'>
                 <Container className='flex flex-col justify-center items-center text-center gap-5'>
                     <Title
                         title={"Haqqımızda və Uğurlarımız"}
-                        description={`Bizim missiyamız gənclərimizin xaricdə keyfiyyətli təhsil almasına dəstək olmaq və onların 
-                            gələcək karyeralarına möhkəm zəmin yaratmaqdır. Məqsədimiz tələbələrə düzgün seçimlərdə yol 
-                            göstərmək və uğurlu gələcək qurmaqda onların etibarlı tərəfdaşı olmaqdır.`}
+                        description={
+                            <>
+                                Bizim missiyamız gənclərimizin xaricdə keyfiyyətli təhsil almasına dəstək olmaq və onların
+                                gələcək karyeralarına möhkəm zəmin yaratmaqdır. Məqsədimiz tələbələrə düzgün seçimlərdə yol
+                                göstərmək və uğurlu gələcək qurmaqda onların etibarlı tərəfdaşı olmaqdır.
+                                <br /> Arzuladığınız təhsil ocağı ilə aranızda körpü olmağa hazırıq!
+                            </>
+                        }
                     />
                     <h3 className='xuduText text-[1.3rem] font-bold'></h3>
                     <div className='text-[#898A8C]'>
