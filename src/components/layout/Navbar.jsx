@@ -22,7 +22,7 @@ function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < 10) {
+      if (currentScrollY < 120) {
         // Always show at the very top
         setVisible(true);
       } else if (currentScrollY > lastScrollY.current) {
