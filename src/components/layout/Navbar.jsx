@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="xuduBg sticky top-0 z-50 flex items-center h-[12dvh]">
+      <nav className="xuduBg sticky top-0 z-50 flex items-center h-[12svh]">
         <Container>
           <div className="flex justify-between items-center text-white">
 

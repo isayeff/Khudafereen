@@ -14,7 +14,7 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
     <Transition.Root show={open} as={Fragment}>
       <Dialog
         as="div"
-        className="sticky top-[12dvh] z-40"
+        className="sticky top-[12svh] z-40"
         onClose={() => setOpen(false)}
         static
       >
