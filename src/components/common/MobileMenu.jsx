@@ -4,17 +4,21 @@ import { Container } from './Container';
 import { scrollToSection } from '../../utils/helpers';
 
 export default function MobileMenu({ open, setOpen, menuItems }) {
-  
+
   const handleClick = (href) => {
-    scrollToSection(href); // smooth scroll
-    setOpen(false);   // close the menu
+    scrollToSection(href);
+    setOpen(false);
   };
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="z-10 bg-white fixed top-[12dvh]" onClose={() => setOpen(false)} static>
-
-        {/* Backdrop */}
+      <Dialog
+        as="div"
+        className="sticky top-[12dvh] z-40"
+        onClose={() => setOpen(false)}
+        static
+      >
+        {/* Backdrop (transparent — menu already has its own bg) */}
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -29,7 +33,7 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
 
         <div className="fixed overflow-hidden">
           <div className="absolute overflow-hidden">
-            <div className="pointer-events-none fixed left-0 flex max-w-full">
+            <div className="pointer-events-none fixed top-[12dvh] left-0 flex max-w-full">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -40,9 +44,12 @@ export default function MobileMenu({ open, setOpen, menuItems }) {
                 leaveTo="-translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen">
-                  <Container className="bg-white absolute pt-5 top-0 h-screen">
+                  <Container className="bg-white pt-5 h-[88dvh] overflow-y-auto">
                     {menuItems.map((item, i) => (
-                      <div key={i} className="flex items-center p-4 gap-6 border-b border-[#f0f0f0]">
+                      <div
+                        key={i}
+                        className="flex items-center p-4 gap-6 border-b border-[#f0f0f0]"
+                      >
                         <div className="text-[#414141]">
                           {item.icon}
                         </div>

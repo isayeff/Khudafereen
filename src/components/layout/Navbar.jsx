@@ -16,10 +16,6 @@ import { scrollToSection } from "../../utils/helpers";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  function onMenuClick(id) {
-    scrollToSection(id)
-  }
-
   const menuItems = [
     { label: 'Haqqımızda', href: 'haqqimizda', icon: <GoHome size={30} /> },
     { label: 'Xidmətlərimiz', href: 'xidmetler', icon: <MdOutlineMedicalServices size={30} /> },
@@ -32,19 +28,19 @@ function Navbar() {
 
   return (
     <>
-      <nav className="xuduBg flex items-center h-[12dvh]">
+      <nav className="xuduBg sticky top-0 z-50 flex items-center h-[12dvh]">
         <Container>
           <div className="flex justify-between items-center text-white">
 
             {/* Logo */}
-            <div>
+            <a href={"/"}> 
               <img
                 src={"/logos/logoNav.svg"}
                 alt="Khudaferin Logo - Official brand logo of Khudaferin"
                 title="Khudaferin Logo"
                 className="w-24 lg:w-30 h-auto"
               />
-            </div>
+            </a>
 
             {/* Hamburger — mobile only */}
             <div className="block lg:hidden">
@@ -56,7 +52,7 @@ function Navbar() {
               {menuItems.map((item, i) => (
                 <li key={i}>
                   <button
-                    onClick={() => onMenuClick(item.href)}
+                    onClick={() => scrollToSection(item.href)}
                     className="text-white cursor-pointer text-sm xl:text-[1rem] hover:opacity-80 transition-opacity"
                   >
                     {item.label}

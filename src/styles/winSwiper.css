@@ -47,17 +47,7 @@
         object-fit: cover;
     }
 
-
-    @media (max-width: 490px) {
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            display: none !important;
-        }
-    }
-
-
-    @media (min-width: 768px) {
+    /* @media (min-width: 768px) { */
         .swiper-slide:hover #cardTextOverlay {
             transform: translateY(0%);
             /* Slide the overlay up */
@@ -68,6 +58,6 @@
                 /* Slide the text down */
         }
 
-    }
+    /* } */
 
 }
